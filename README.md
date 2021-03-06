@@ -33,13 +33,28 @@ A class should only have a single responsibility, that is, only changes to one p
 
 
 ## Creational Patterns
+* Deal with the creation (construction) of objects.
 
 ### Builder
 Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.
 
+Motivation:
+* Some objects are simple and can be created in a single initializer call.
+* Other objects require a lot of ceremony to create.
+* Having an object with 10 initializer arguments is not productive.
+* Instead, opt for piecewise construction.
+* Builder is a component that provides an API for constructing and object step-by-step.
+
+### Factory Method
+Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+
 
 
 ## Structural Patterns
+* Concerned with the structure (e.g., class members).
+* Many patterns are wrappers that mimic the underlying class' interface.
+* Put extra weight on the importance of good API design.
 
 
 ## Behavioral Patterns
+* They are all different; no central theme
