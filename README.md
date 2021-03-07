@@ -45,10 +45,24 @@ Motivation:
 * Instead, opt for piecewise construction.
 * Builder is a component that provides an API for constructing and object step-by-step.
 
-### Factory Method
+### Factory Method & Abstract Factory
 Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+A Factory is a component responsible solely for the wholesale (not piecewise) creation of objects.
+Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
 
+Factories motivation:
+* Object creation logic become too convoluted
+* Initializer is not descriptive, mane is always __init__. Cannot overload with same sets of arguments with different names, can turn into 'optional parameter hell'
+* Wholesale object creation (non-piecewise, unlike Builder) can be outsourced to:
+  * A separate method (Factory Method)
+  * That may exist in a separate class (Factory)
+  * Can create hierarchy of factories with Abstract Factory
 
+Summary:
+* A Factory Method is a static method that creates Objects
+* A Factory is any entity that can take care of object creation
+* A Factory can be external or reside inside the object as an inner class
+* Hierarchies of factories can be used to create related objects
 
 ## Structural Patterns
 * Concerned with the structure (e.g., class members).
