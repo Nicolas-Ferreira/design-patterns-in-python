@@ -52,7 +52,7 @@ Abstract Factory is a creational design pattern that lets you produce families o
 
 Factories motivation:
 * Object creation logic become too convoluted
-* Initializer is not descriptive, mane is always __init__. Cannot overload with same sets of arguments with different names, can turn into 'optional parameter hell'
+* Initializer is not descriptive, name is always __init__. Cannot overload with same sets of arguments with different names, can turn into 'optional parameter hell'
 * Wholesale object creation (non-piecewise, unlike Builder) can be outsourced to:
   * A separate method (Factory Method)
   * That may exist in a separate class (Factory)
@@ -63,6 +63,23 @@ Summary:
 * A Factory is any entity that can take care of object creation
 * A Factory can be external or reside inside the object as an inner class
 * Hierarchies of factories can be used to create related objects
+
+### Prototype
+Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
+A Prototype is a partially or fully initialized object that you copy (clone) and make use of it.
+
+Motivation:
+* Complicated objects (e.g. cars) are not designed from scratch. They reiterate existing designs
+* An existing (partially or fully constructed) design is a Prototype
+* We make a copy (clone) the prototype and customize it
+* We make the cloning convenient (e.g. via a Factory)
+
+Summary:
+* To implement a prototype, partially construct an object and store it somewhere
+* Deep copy the prototype
+* Customize the resulting instance
+* A factory provides a convenient API for using prototypes
+
 
 ## Structural Patterns
 * Concerned with the structure (e.g., class members).
