@@ -80,6 +80,27 @@ Summary:
 * Customize the resulting instance
 * A factory provides a convenient API for using prototypes
 
+### Singleton
+Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+
+Motivation:
+* For some components it only makes sense to have one in the system
+  * Database repository
+  * Object factory
+* E.g. the initializer call is expensive
+  * We only do it once
+  * We provide everyone with the same instance
+* We want to prevent anyone creating additional copies
+* Need to take care of lazy instantiation, you initialized it only when somebody ask for
+
+Summary:
+* Different realizations of Singleton:
+  * Custom Allocator (was a nice idea but unfortunately still ended up calling the initializer more than once)
+  * Decorator
+  * Metaclass (This is probably the nicest implementation of Singleton)
+  * Monostate variation
+* Laziness is easy, just init the Singleton on first request (we check if it has been created before)
+
 
 ## Structural Patterns
 * Concerned with the structure (e.g., class members).
