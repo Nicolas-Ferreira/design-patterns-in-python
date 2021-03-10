@@ -107,6 +107,27 @@ Summary:
 * Many patterns are wrappers that mimic the underlying class' interface.
 * Put extra weight on the importance of good API design.
 
+### Adapter
+Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate. A construct which adapts an existing interface X to conform to the required interface Y.
+
+Summary:
+* Implementing and adapter is easy
+* First determine the API you have and the API you need
+* Then create a component which aggregates (has a reference to ...) the adaptee
+* Intermediate representations can pile up: use caching and other optimizations
+
+### Bridge
+Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
+
+Motivation:
+* Bridge prevents a Cartesian product' complexity explosion
+* Example:
+  * Base class ThreadScheduler
+  * Can be preemptive or cooperative
+  * Can run on Windows or Unix
+  * End up with a 2x2 scenario: WinPTS, UnixPTS, WinCTS, UnixCTS
+* Bridge pattern avoids the entity explosion
+
 
 ## Behavioral Patterns
 * They are all different; no central theme
