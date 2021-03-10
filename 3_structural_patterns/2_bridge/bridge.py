@@ -1,0 +1,58 @@
+# Lets suppose you have a drawing app
+# it can render
+# circle and square
+# it can render both in different forms
+# vector and raster
+
+# You could have a class for each one of them
+# VectorCircle, VectorSquare, RasterCircle, RasterSquare
+# The problem with this approach is that it DOES NOT SCALE
+
+from abc import ABC
+
+
+class Renderer(ABC):
+    def render_circle(self, radius):
+        pass
+
+
+class VectorRenderer(Renderer):
+    def render_circle(self, radius):
+        print(f'Drawing a circle of radius {radius}')
+
+
+class RasterRenderer(Renderer):
+    def render_circle(self, radius):
+        print(f'Drawing pizels for a circle of radius {radius}')
+
+
+class Shape:
+    def __init__(self, renderer):
+        self.renderer = renderer
+
+    def draw(self):
+        pass
+
+    def resize(self, factor):
+        pass
+
+
+class Circle(Shape):
+    def __init__(self, renderer, radius):
+        super().__init__(renderer)
+        self.radius = radius
+
+    def draw(self):
+        self.renderer.render_circle(self.radius)
+
+    def resize(self, factor):
+        self.radius *= factor
+
+
+if __name__ == '__main__':
+    raster = RasterRenderer()
+    vector = VectorRenderer()
+    circle = Circle(raster, 5)
+    circle.draw()
+    circle.resize(2)
+    circle.draw()
