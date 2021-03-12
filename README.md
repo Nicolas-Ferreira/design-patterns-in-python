@@ -128,6 +128,17 @@ Motivation:
   * End up with a 2x2 scenario: WinPTS, UnixPTS, WinCTS, UnixCTS
 * Bridge pattern avoids the entity explosion
 
+### Composite
+Composite is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+Motivation:
+* Objects use other objects' properties/members through inheritance and composition
+* Composition lets us make compound objects
+  * E.g. a mathematical expression composed of simple expressions
+  * E.g. a grouping of shapes that consists of several shapes
+* Composite design pattern is used to treat both single (scalar) and composite objects uniformly
+  * I.e. Foo and Sequence (yielding Foo's) have common APIs
+
 
 ## Behavioral Patterns
 * They are all different; no central theme
