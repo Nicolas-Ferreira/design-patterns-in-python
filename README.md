@@ -159,6 +159,25 @@ Summary:
 * Proxying of underlying calls can be done dynamically
 * Python's functional decorators wrap functions; no direct relation to the GoF Decorator pattern
 
+### Facade
+Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.
+Facade provides a simple, easy to understand/use interface over a large and sophisticated body of code.
+
+Motivation:
+* Balancing complexity and presentation/usability
+* Typical home
+  * Many subsystems (electrical, sanitation)
+  * Complex internal structure (floor layers)
+  * End user is not exposed to internals
+* Same with software!
+  * Many systems working provide flexibility, but..
+  * API consumers want it to just work
+
+Summary:
+* Build a Facade to provide a simplified API over a set of Classes
+* May wish to (optionally) expose internals through the facade
+* May allow users to escalate to use more complex APIs if the need to
+
 
 ## Behavioral Patterns
 * They are all different; no central theme
