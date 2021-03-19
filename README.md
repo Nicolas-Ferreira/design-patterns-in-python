@@ -178,6 +178,25 @@ Summary:
 * May wish to (optionally) expose internals through the facade
 * May allow users to escalate to use more complex APIs if the need to
 
+### Flyweight
+Flyweight is a structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
+It is a space optimization technique that lets us use less memory by storing externally the data associated with similar objects.
+
+Motivation:
+* Avoid redundancy when storing data
+* E.g. MMORPG
+  * Plenty of users with identical first/last names
+  * No sense in storing same first/last names over and over again
+  * Store a list of names and references to them
+* E.g. bold or italic text formatting
+  * Do not want each character to have a formatting character
+  * Operate on ranges (e.g. line number, start/end positions)
+
+Summary:
+* Store common data externally
+* Specify an index or a reference into the external data store
+* Define the idea of 'ranges' on homogeneous collections and store data related to those ranges
+
 
 ## Behavioral Patterns
 * They are all different; no central theme
