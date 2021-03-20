@@ -220,3 +220,25 @@ Summary:
 
 ## Behavioral Patterns
 * They are all different; no central theme
+
+### Chain of Responsibility
+Chain of Responsibility is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+It is all about chaining several components who all get a chance to process a command or a query, optionally having default processing implementation and an ability to terminate the processing chain.
+
+Motivation:
+* Unethical behavior by an employee; who takes the blame?
+  * Employee
+  * Manager
+  * CEO
+* You click a graphical element on a form
+  * Button handles it, stops further processing
+  * Underlying group box
+  * Underlying window
+* CCG computer game
+  * Creature has attack and defense values
+  * Those can be boosted by others
+
+Summary:
+* CoR can be implemented as a chain of references or a centralized construct
+* Enlist objects in the chain, possible controlling their order
+* Object removal from chain (e.g. in __exit__)
