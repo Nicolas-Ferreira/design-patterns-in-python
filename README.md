@@ -242,3 +242,22 @@ Summary:
 * CoR can be implemented as a chain of references or a centralized construct
 * Enlist objects in the chain, possible controlling their order
 * Object removal from chain (e.g. in __exit__)
+
+### Command
+Command is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you parameterize methods with different requests, delay or queue a request’s execution, and support undoable operations.
+A command is simple an object which represents an instruction to perform a particular action. Contains all the information necessary for the action to be taken.
+
+Motivation:
+* Ordinary statements are perishable
+  * Cannot undo member assignment
+  * Cannot directly serialize a sequence of actions (calls)
+* Want an object that represents and operation
+  * person should change its age to value 22
+  * car should do explode()
+* Uses: GUI commands, multi-level undo/redo, macro recording and more!
+
+Summary:
+* Encapsulate all details of an operation in a separate object
+* Define instruction for applying the command (either in the command itself or elsewhere)
+* Optionally define instructions for undoing the command
+* Can create composite commands (a.k.a. macros)
