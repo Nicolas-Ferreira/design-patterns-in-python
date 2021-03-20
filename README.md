@@ -197,6 +197,26 @@ Summary:
 * Specify an index or a reference into the external data store
 * Define the idea of 'ranges' on homogeneous collections and store data related to those ranges
 
+### Proxy
+Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+It is basically a class that functions as an interface to a particular resource. That resource may be remote, expensive to construct, or may require logging or some other added functionality.
+
+Motivation:
+* You are calling foo.Bar()
+* This assumes that foo is in the same process as Bar()
+* What if, later on, you want to put all Foo-related operations into a separate process
+  * Can you avoid changing your code?
+* Proxy to the rescue!
+  * Same interface, entirely different behaviour
+* This is called a communication Proxy
+  * Other types: logging, virtual, guarding, ...
+
+Summary:
+* A proxy has the same interface as the underlying object
+* To create a proxy, simply replicate the existing interface of an object
+* Add relevant functionality to the redefined member functions
+* Different proxies (communication, logging, caching, etc.) have completely different behaviours
+
 
 ## Behavioral Patterns
 * They are all different; no central theme
