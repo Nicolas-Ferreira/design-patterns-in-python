@@ -274,3 +274,9 @@ Motivation:
   * Numeric expressions (3+4/5)
   * Regular expressions
 * Turning strings into OOP based structures in a complicated object
+
+Summary:
+* Barring simple cases, an interpreter acts in two stages
+* Lexing turns text into a set of tokens, e.g. 3*(4+5) -> Lit[3] Star Lparen Lit[4] Plus Lit[5] Rparen
+* Parsing tokens into meaningful constructs
+* Parsed data can then be traversed
