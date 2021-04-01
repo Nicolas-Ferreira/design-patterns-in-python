@@ -261,3 +261,16 @@ Summary:
 * Define instruction for applying the command (either in the command itself or elsewhere)
 * Optionally define instructions for undoing the command
 * Can create composite commands (a.k.a. macros)
+
+### Interpreter
+The interpreter is a component that processes structured text data. Does so by turning it into separate lexical tokens (lexing) and the interpreting sequences of said tokens (parsing).
+
+Motivation:
+* Textual input needs to be processed
+  * E.g. turned into OOP structures 
+* Some examples
+  * Programming language compilers
+  * HTML, XML and similar
+  * Numeric expressions (3+4/5)
+  * Regular expressions
+* Turning strings into OOP based structures in a complicated object
