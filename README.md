@@ -280,3 +280,16 @@ Summary:
 * Lexing turns text into a set of tokens, e.g. 3*(4+5) -> Lit[3] Star Lparen Lit[4] Plus Lit[5] Rparen
 * Parsing tokens into meaningful constructs
 * Parsed data can then be traversed
+
+### Iterator
+Iterator is a behavioral design pattern that lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
+
+Motivation:
+* Iteration (traversal) is a core functionality of various data structures
+* An iterator is a class that facilitates the traversal
+  * Keeps a reference to the current element
+  * Knows how to move to a different element
+* The iterator protocol requires
+  * '__iter__()' to expose the iterator, which uses
+  * '__next__()' to return each of the iterated elements or
+  * raise StopIteration when it's done
