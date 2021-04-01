@@ -52,7 +52,7 @@ Abstract Factory is a creational design pattern that lets you produce families o
 
 Factories motivation:
 * Object creation logic become too convoluted
-* Initializer is not descriptive, name is always __init__. Cannot overload with same sets of arguments with different names, can turn into 'optional parameter hell'
+* Initializer is not descriptive, name is always `__init__`. Cannot overload with same sets of arguments with different names, can turn into 'optional parameter hell'
 * Wholesale object creation (non-piecewise, unlike Builder) can be outsourced to:
   * A separate method (Factory Method)
   * That may exist in a separate class (Factory)
@@ -241,7 +241,7 @@ Motivation:
 Summary:
 * CoR can be implemented as a chain of references or a centralized construct
 * Enlist objects in the chain, possible controlling their order
-* Object removal from chain (e.g. in __exit__)
+* Object removal from chain (e.g. in `__exit__`)
 
 ### Command
 Command is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you parameterize methods with different requests, delay or queue a request’s execution, and support undoable operations.
@@ -290,6 +290,11 @@ Motivation:
   * Keeps a reference to the current element
   * Knows how to move to a different element
 * The iterator protocol requires
-  * '__iter__()' to expose the iterator, which uses
-  * '__next__()' to return each of the iterated elements or
+  * `__iter__()` to expose the iterator, which uses
+  * `__next__()` to return each of the iterated elements or
   * raise StopIteration when it's done
+
+Summary:
+* An iterator specify how you can traverse an object
+* Stateful iterators cannot be recursive
+* yield allows for much more succinct iteration
