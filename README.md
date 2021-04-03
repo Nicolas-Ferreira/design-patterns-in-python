@@ -298,3 +298,8 @@ Summary:
 * An iterator specify how you can traverse an object
 * Stateful iterators cannot be recursive
 * yield allows for much more succinct iteration
+
+### Mediator
+Mediator is a behavioral design pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
+
+Motivation:
