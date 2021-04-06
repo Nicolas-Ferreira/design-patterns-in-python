@@ -303,3 +303,17 @@ Summary:
 Mediator is a behavioral design pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
 
 Motivation:
+* Components may go in and out of a system at any time
+  * Chat room participants
+  * Players in a MMORPG
+* It makes no sense for them to have direct references to one another
+  * Those references may go dead
+* Solution: have them all refer to some central component that facilitates communication
+
+Summary:
+* Create the mediator and have each object in the system to refer to it
+  * E.g. in a property
+* Mediator engages the bidirectional communication with tis connected components
+* Mediator has functions the components can call
+* Components have functions the mediator can call
+* Event processing libraries make communication easier to implement
