@@ -351,3 +351,9 @@ Summary:
 * Observer is an intrusive approach: an observable must provide an event to subscribe to
 * Subscription and unsubscription handle with addition/removal of items in a list
 * Property notifications are easy; dependent property notifications are tricky
+
+### State
+State is a behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
+
+Motivation:
+* 
